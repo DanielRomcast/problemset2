@@ -11,7 +11,7 @@ setwd("~/Problemset2/output")
       
 
 location<-import(file= "location.rds.csv" ,skip=1)
-identificacion = import(file="identification.rds.csv" , skip=1)
+identificacion <- import(file="identification.rds.csv" , skip=1)
 
 ## Exportar
 
