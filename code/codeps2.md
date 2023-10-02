@@ -10,12 +10,14 @@ library(tidyverse)
 setwd("~/Problemset2/output")
       
 
-location<-import(file= "location.rds.csv" ,skip=1)
-identificacion <- import(file="identification.rds.csv" , skip=1)
+location<-import(file= "Modulo de sitio o ubicacion.sav" ,skip=1)
+identificacion <- import(file="Modulo de identificacion.sav" , skip=1)
 
 ## Exportar
 saveRDS(data.frame(identificacion), "identification.rds")
 saveRDS(data.frame(location), "location.rds")
 
 ## Generar variables
-identificacion <- mutate(identificacion, business_type = case_when(v1 == 1 ~ "agricultura", v1 == 2 ~ "industria manufacturera", v1 == 3 ~ "comercio", v1 == 4 ~ "servicios"))
+identificacion <- mutate(identificacion, business_type = case_when(GRUPOS4 == 1 ~ "agricultura", GRUPOS4 == 2 ~ "industria manufacturera", GRUPOS4 == 3 ~ "comercio", GRUPOS4 == 4 ~ "servicios"))
+
+location <-  mutate(location, local = ifelse(test = ()))
