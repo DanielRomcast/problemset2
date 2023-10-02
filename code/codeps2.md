@@ -18,6 +18,7 @@ saveRDS(data.frame(identificacion), "identification.rds")
 saveRDS(data.frame(location), "location.rds")
 
 ## Generar variables
+## Generar variable con condicional 1
 identificacion <- mutate(identificacion, business_type = case_when(GRUPOS4 == 1 ~ "agricultura", GRUPOS4 == 2 ~ "industria manufacturera", GRUPOS4 == 3 ~ "comercio", GRUPOS4 == 4 ~ "servicios"))
-
-location <-  mutate(location, local = ifelse(test = ()))
+## Generar variable con condicional 2
+location <- mutate(location, local = ifelse(test = (P3053 == 6 | P3053 == 7 ), yes=1 , no=0))
