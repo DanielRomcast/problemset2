@@ -16,5 +16,6 @@ identificacion <- import(file="identification.rds.csv" , skip=1)
 ## Exportar
 saveRDS(data.frame(identificacion), "identification.rds")
 saveRDS(data.frame(location), "location.rds")
+
 ## Generar variables
-...
+identificacion <- mutate(identificacion, business_type = case_when(v1 == 1 ~ "agricultura", v1 == 2 ~ "industria manufacturera", v1 == 3 ~ "comercio", v1 == 4 ~ "servicios"))
