@@ -14,7 +14,7 @@ location<-import(file= "location.rds.csv" ,skip=1)
 identificacion <- import(file="identification.rds.csv" , skip=1)
 
 ## Exportar
-
-
+saveRDS(data.frame(identificacion), "identification.rds")
+saveRDS(data.frame(location), "location.rds")
 ## Generar variables
 ...
