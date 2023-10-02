@@ -33,5 +33,6 @@ location_sub <- location[, c("DIRECTORIO", "SECUENCIA_P", "SECUENCIA_ENCUESTA", 
 
 ## sobreescribir variables de un objeto
 
+identification_sub <- select(.data = identification_sub, c("DIRECTORIO", "SECUENCIA_P", "SECUENCIA_ENCUESTA", "P35", "P241", "P3032_1", "P3032_2" , "P3032_3" , "P3033", "P3034"))
 ## combinar base de datos
-....
+
